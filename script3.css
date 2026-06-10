@@ -1,0 +1,277 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #111;
+  color: rgb(30, 20, 20);
+  overflow-x: hidden;
+}
+
+/* HERO SECTION */
+
+.hero {
+  width: 100%;
+  height: 100vh;
+
+  background:
+    linear-gradient(rgba(252, 245, 245, 0.5),
+    rgba(14, 12, 12, 0.5)),
+    url('https://png.pngtree.com/thumb_back/fh260/background/20240416/pngtree-modern-white-office-desk-table-with-laptop-camera-notebook-and-other-image_15658714.jpg');
+  background-size: cover;
+  background-position: center;
+
+  position: relative;
+}
+
+/* NAVBAR */
+
+.navbar {
+  width: 100%;
+  padding: 25px 80px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: absolute;
+  top: 0;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #00d4ff;
+}
+
+.nav-btn {
+  padding: 14px 28px;
+  border: none;
+  background: white;
+  color: black;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.nav-btn:hover {
+  transform: scale(1.05);
+}
+
+/* HERO CONTENT */
+
+.hero-content {
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding-left: 100px;
+}
+
+.small-title {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.hero-content h1 {
+  font-size: 80px;
+  line-height: 1.1;
+  max-width: 900px;
+  font-weight: 600;
+}
+
+.hero-btn {
+  margin-top: 40px;
+  width: 220px;
+
+  padding: 18px 30px;
+  border: none;
+
+  background: white;
+  color: black;
+
+  font-size: 18px;
+  border-radius: 10px;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hero-btn:hover {
+  transform: translateY(-5px);
+}
+
+/* FILTERS */
+
+.filters-section {
+  padding: 40px 0;
+  background: #111;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.filters button {
+  padding: 12px 28px;
+
+  border: 1px solid rgba(255,255,255,0.2);
+
+  background: rgba(255,255,255,0.05);
+
+  color: white;
+  border-radius: 40px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.filters button:hover {
+  background: #00d4ff;
+  color: black;
+}
+
+/* GALLERY */
+
+.gallery-section {
+  padding: 30px 80px 80px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+  gap: 30px;
+}
+
+.image {
+  overflow: hidden;
+  border-radius: 20px;
+  cursor: pointer;
+  position: relative;
+}
+
+.image img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+
+  transition: 0.5s;
+}
+
+.image:hover img {
+  transform: scale(1.1);
+}
+
+/* LIGHTBOX */
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+
+  background: rgba(0,0,0,0.95);
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 999;
+}
+
+.lightbox-img {
+  width: 75%;
+  border-radius: 20px;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+
+  font-size: 50px;
+  cursor: pointer;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 60px;
+  height: 60px;
+
+  border: none;
+  border-radius: 50%;
+
+  font-size: 30px;
+
+  background: rgba(255,255,255,0.2);
+  color: rgb(36, 32, 32);
+
+  cursor: pointer;
+}
+
+.prev {
+  left: 30px;
+}
+
+.next {
+  right: 30px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+  .navbar {
+    padding: 20px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .hero-content {
+    padding: 40px;
+  }
+
+  .hero-content h1 {
+    font-size: 45px;
+  }
+
+  .gallery-section {
+    padding: 20px;
+  }
+
+  .lightbox-img {
+    width: 95%;
+  }
+
+}
