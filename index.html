@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modern Image Gallery</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="hero">
+
+<nav class="navbar">
+<h2 class="logo">ALFA GALLERY</h2>
+
+<ul class="nav-links">
+<li><a href="#">Home</a></li>
+<li><a href="#">Gallery</a></li>
+<li><a href="#">Portfolio</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+
+<button class="btn">Get Started</button>
+</nav>
+
+<div class="hero-content">
+<p>Portfolio Website</p>
+
+<h1>Create a Stunning <br> Image Gallery That <br> Impresses Everyone</h1>
+
+<button class="hero-btn">Explore Gallery</button>
+</div>
+
+</header>
+
+<section class="filter-section">
+
+<button onclick="filterImages('all')">All</button>
+<button onclick="filterImages('nature')">Nature</button>
+<button onclick="filterImages('cars')">Cars</button>
+<button onclick="filterImages('animals')">Animals</button>
+
+</section>
+
+<section class="gallery">
+
+<div class="card nature">
+<img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb">
+</div>
+
+<div class="card cars">
+<img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7">
+</div>
+
+<div class="card animals">
+<img src="https://images.unsplash.com/photo-1517849845537-4d257902454a">
+</div>
+
+<div class="card nature">
+<img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e">
+</div>
+
+<div class="card cars">
+<img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70">
+</div>
+
+<div class="card animals">
+<img src="https://images.unsplash.com/photo-1517423440428-a5a00ad493e8">
+</div>
+
+</section>
+
+<div class="lightbox">
+
+<span class="close">&times;</span>
+
+<button class="prev">&#10094;</button>
+
+<img class="lightbox-img">
+
+<button class="next">&#10095;</button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
